@@ -18,7 +18,7 @@ def init_login():
     # options.binary_location = r"C:\Python\Scripts\chromedriver.exe"
     # chrome_options = Options()
     # chrome_options.add_argument('--headless')
-    driver = Chrome(executable_path = r"C:\Python\Scripts\chromedriver.exe")
+    driver = Chrome(executable_path=r'C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe')
     driver.implicitly_wait(30)
     # 初始化登录页面
     login = LoginPage(driver)
@@ -32,7 +32,7 @@ def init_bid():
     # options = Options()
     # options.binary_location = r"C:\Python\Scripts\chromedriver.exe"
     # chrome_options.add_argument('--headless')
-    driver = Chrome(executable_path = r"C:\Python\Scripts\chromedriver.exe")
+    driver = Chrome(executable_path=r'C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe')
     driver.implicitly_wait(30)
     # 初始化登录页面
     login = LoginPage(driver)
