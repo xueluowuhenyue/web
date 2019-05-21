@@ -2,7 +2,6 @@
 
 from selenium.webdriver import Chrome
 from selenium.webdriver.chrome.options import Options
-# from selenium.webdriver import ChromeOptions
 from Data.test_data import bid_data
 from Pages.bid import BidPage
 from Pages.home import HomePage
@@ -14,11 +13,10 @@ from Pages.personal import PersonalPage
 
 @pytest.fixture(scope="module")
 def init_login():
-    # options=Options()
-    # options.binary_location = r"C:\Python\Scripts\chromedriver.exe"
+    driver = Chrome()
     # chrome_options = Options()
     # chrome_options.add_argument('--headless')
-    driver = Chrome(executable_path=r'C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe')
+    # driver = Chrome(chrome_options=chrome_options)
     driver.implicitly_wait(30)
     # 初始化登录页面
     login = LoginPage(driver)
@@ -28,11 +26,10 @@ def init_login():
 
 @pytest.fixture(scope="module")
 def init_bid():
-    # driver=Chrome()
-    # options = Options()
-    # options.binary_location = r"C:\Python\Scripts\chromedriver.exe"
+    driver=Chrome()
+    # chrome_options = Options()
     # chrome_options.add_argument('--headless')
-    driver = Chrome(executable_path=r'C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chromedriver.exe')
+    # driver = Chrome(chrome_options=chrome_options)
     driver.implicitly_wait(30)
     # 初始化登录页面
     login = LoginPage(driver)
