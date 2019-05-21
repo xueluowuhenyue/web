@@ -26,7 +26,7 @@ class BidPage(BasePage):
 
     def get_prompt(self):
         '''获取投标提示'''
-        ele=self.wait_ele(bid_locator.bid_prompt)
+        ele=self.wait_ele(bid_locator.bid_prompt,30)
         return ele.text
 
     def alter_click(self):
@@ -35,12 +35,12 @@ class BidPage(BasePage):
 
     def get_button_prompt(self):
         '''获取按钮上的提示'''
-        ele=self.wait_ele(bid_locator.error_button)
+        ele=self.wait_ele(bid_locator.error_button,30)
         return ele.text
 
     def click_confirm(self):
         '''点击弹框确认'''
-        self.wait_click(bid_locator.alter_confirm)
+        self.wait_click(bid_locator.alter_confirm,30)
 
     def get_error_prompt(self):
         '''错误提示'''

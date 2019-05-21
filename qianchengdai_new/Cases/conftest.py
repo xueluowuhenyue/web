@@ -16,7 +16,7 @@ from Pages.personal import PersonalPage
 def init_login():
     chrome_options = ChromeOptions()
     chrome_options.binary_location=r'C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe'
-    # chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--headless')
     driver = Chrome(executable_path=r"C:\Python\Scripts\chromedriver.exe",options=chrome_options)
     driver.implicitly_wait(30)
     # 初始化登录页面
@@ -28,8 +28,8 @@ def init_login():
 @pytest.fixture(scope="module")
 def init_bid():
     # driver=Chrome()
-    # chrome_options.add_argument('--headless')
     chrome_options = ChromeOptions()
+    chrome_options.add_argument('--headless')
     chrome_options.binary_location = r'C:\Users\Administrator\AppData\Local\Google\Chrome\Application\chrome.exe'
     driver = Chrome(executable_path=r"C:\Python\Scripts\chromedriver.exe", options=chrome_options)
     driver.implicitly_wait(30)
